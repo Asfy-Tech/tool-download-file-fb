@@ -111,8 +111,11 @@ def input_account(account):
 
 
 def check_login(account):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    profile_dir = os.path.join(current_dir, "profiles", f"profile_{account.get('id')}")
+    os.makedirs(profile_dir, exist_ok=True)
 
-    driver = create_browser(headless=True)
+    driver = create_browser(headless=True,profile_dir=profile_dir)
 
     check = False
     try:
