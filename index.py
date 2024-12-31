@@ -8,6 +8,7 @@ from terminal.create_account import input_account
 from terminal.create_account import check_login
 from terminal.create_account import switch_account
 from terminal.create_account import question_account
+from cronjob import main as cronjob_main
 
 
 def main():
@@ -16,6 +17,7 @@ def main():
 
     choices = [
         "Danh sách tài khoản",
+        "Chạy cronjob",
         "Thoát"
     ]
     
@@ -29,6 +31,8 @@ def main():
         
         if action == "Danh sách tài khoản":
             question_account()
+        elif action == "Chạy cronjob":
+            cronjob_main()
         else:
             console.print("Thoát chương trình.")
     else:
