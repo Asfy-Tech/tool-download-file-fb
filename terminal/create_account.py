@@ -40,10 +40,15 @@ def create_browser(headless=False,profile_dir=''):
     }
     options.add_experimental_option("prefs", prefs)
 
-    # service = Service(EdgeChromiumDriverManager().install())
-    service = Service('chromedriver.exe')
-    # Tự động tải và chạy driver
-    driver = webdriver.Chrome(service=service,options=options)
+    driver = None
+    # Tạo service
+    try:
+        # service = Service(EdgeChromiumDriverManager().install())
+        service = Service('chromedriver.exe')
+        # Tự động tải và chạy driver
+        driver = webdriver.Chrome(service=service,options=options)
+    except Exception as e:
+        print(f"Failed to create browser: {str(e)}")
     return driver
 
 
@@ -116,14 +121,14 @@ def check_login(account):
         for cookie in account['cookies']:
             driver.add_cookie(cookie)
 
-        driver.get('https://facebook.com')
+        driver.refresh()
 
         WebDriverWait(driver, 3).until(
             EC.presence_of_element_located((By.XPATH, "//meta[@name='viewport']"))
         )
         check = True
-    except:
-        pass
+    except Exception as e:
+        print(f"Lỗi khi check login: {str(e)}")
     finally:
         driver.quit()
     
