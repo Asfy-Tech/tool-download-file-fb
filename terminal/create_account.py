@@ -1,7 +1,7 @@
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.edge.options import Options
@@ -39,7 +39,7 @@ def create_browser(headless=False,profile_dir=''):
     options.add_experimental_option("prefs", prefs)
 
     # Tự động tải và chạy driver
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()),options=options)
     return driver
 
 
@@ -174,7 +174,7 @@ def question_account():
 
 def switch_account(account):
     console = Console()
-    console.print(f"[bold green]Tài khoản đã chọn:[/] {account['name']} - {account['cron_time']} hàng này", style="bold green")
+    console.print(f"[bold green]Tài khoản đã chọn:[/] {account['name']} - {account['cron_time']} hàng ngày", style="bold green")
     choice_options = ["Đăng nhập lại",'Đăng nhập',"Lấy dữ liệu ngay","Quay lại"]
     account_question = inquirer.List('account', message="Chọn một trong các tùy chọn sau: ", choices=choice_options, carousel=True)
     account_answer = inquirer.prompt([account_question])
