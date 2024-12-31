@@ -1,2 +1,2 @@
-git rm -r --cached terminal/profiles/
+terminal/profiles/*
 __pycache__
