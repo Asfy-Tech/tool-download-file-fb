@@ -1,10 +1,12 @@
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.chrome.options import Options
+
+# from webdriver_manager.microsoft import EdgeChromiumDriverManager
+# from selenium.webdriver.edge.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.edge.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 import json
 import re
@@ -38,8 +40,10 @@ def create_browser(headless=False,profile_dir=''):
     }
     options.add_experimental_option("prefs", prefs)
 
+    # service = Service(EdgeChromiumDriverManager().install())
+    service = Service('chromedriver.exe')
     # Tự động tải và chạy driver
-    driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()),options=options)
+    driver = webdriver.Chrome(service=service,options=options)
     return driver
 
 

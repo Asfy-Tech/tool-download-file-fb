@@ -1,116 +1,71 @@
-[10660:32736:1231/090735.310:WARNING:chrome_main_delegate.cc(773)] This is Chrome version 131.0.2903.112 (not a warning)
-[10660:32736:1231/090735.377:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090735.377:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090735.380:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090735.383:WARNING:activity_log_policy.cc(68)] Scheduling init
-[10660:32736:1231/090735.384:WARNING:activity_log_policy.cc(68)] Scheduling init
-[10660:32736:1231/090735.397:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[15600:13608:1231/090735.428:WARNING:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
-[10660:32736:1231/090735.493:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090736.383:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090736.399:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090736.399:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090736.401:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090736.401:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090736.641:INFO:CONSOLE(21)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: https://www.facebook.com/ (21)
-[10660:32736:1231/090736.690:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://www.chromium.org/developers/design-documents/create-amazing-password-forms) %o", source: https://www.facebook.com/ (0)
-[15600:13608:1231/090736.803:ERROR:gles2_cmd_decoder_passthrough.cc(1053)] [GroupMarkerNotSet(crbug.com/242999)!:A0203200445B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
-[10660:32736:1231/090736.806:INFO:CONSOLE(0)] "[GroupMarkerNotSet(crbug.com/242999)!:A0203200445B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.", source: https://www.facebook.com/ (0)
-[10660:32736:1231/090736.815:INFO:CONSOLE(0)] "
-%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source:  (0)
-[10660:32736:1231/090736.815:INFO:CONSOLE(0)] "
-%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source:  (0)
-[10660:32736:1231/090736.815:INFO:CONSOLE(0)] "
-%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source:  (0)
-[10660:32736:1231/090736.815:INFO:CONSOLE(0)] "
-%c ", source:  (0)
-[15600:13608:1231/090736.817:ERROR:gles2_cmd_decoder_passthrough.cc(1053)] [GroupMarkerNotSet(crbug.com/242999)!:A0F03100445B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
-[10660:32736:1231/090736.819:INFO:CONSOLE(0)] "[GroupMarkerNotSet(crbug.com/242999)!:A0F03100445B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.", source: https://www.facebook.com/ (0)
-[10660:32736:1231/090737.643:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.643:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.645:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.645:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.653:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.654:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.654:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.663:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.663:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.664:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.664:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.664:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.665:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090737.665:ERROR:interface_endpoint_client.cc(725)] Message 6 rejected by interface blink.mojom.WidgetHost
-[10660:32736:1231/090738.660:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.365:INFO:CONSOLE(238)] "
+[21188:31712:1231/100112.081:WARNING:chrome_main_delegate.cc(773)] This is Chrome version 131.0.2903.112 (not a warning)
+[21188:31712:1231/100112.155:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.155:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.157:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.164:WARNING:activity_log_policy.cc(68)] Scheduling init
+[21188:31712:1231/100112.164:WARNING:activity_log_policy.cc(68)] Scheduling init
+[21188:31712:1231/100112.177:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[29312:7492:1231/100112.209:WARNING:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
+[21188:31712:1231/100112.274:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.282:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.850:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.851:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.851:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.873:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.873:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.874:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100112.874:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100113.812:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100114.301:INFO:CONSOLE(49)] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4iY2m4/y9/l/rt/Jom8lU9q87Wzi2UzwRVfOcsNMeJkz90RCvsEqwZuf11uqubjGwY6-daTkdXnb59cMhqzsxY7X7YqjjkPXWDQjwnnOW6gT-9ZGFKS2hN8MLRGq9hsbn4nxmMQodnB8hGaGpVjvHp5sD-pW0wPeLKAWXLbsUOoHqCwvf_OIvXLgSDifMUUbqxwhUx8uN9gf1r0kvov5PUGgNvzUPCctg99kqxeVaHGhkV78lrPRMcGqcZEVjO99fRmW3JrvMPAl-i5ZtwZI6xWUrTP5g2My9x_7jtzZT0-QTE1hHt3E_efm9iyOYWm-fEbeVlOH5Ts3-CGsXcG4xa-CQ.js?_nc_eui2=AeFFmdCUUWNoH1pv1azCmdTn2I6aNybK9Q7Yjpo3Jsr1DiCxthyjCB9IAFAkphoMpSnyifJy3OpRXg3SPSK-mv1f (49)
+[21188:31712:1231/100114.791:INFO:CONSOLE(238)] "
 %cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
-[10660:32736:1231/090739.365:INFO:CONSOLE(238)] "
+[21188:31712:1231/100114.791:INFO:CONSOLE(238)] "
 %cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
-[10660:32736:1231/090739.365:INFO:CONSOLE(238)] "
+[21188:31712:1231/100114.791:INFO:CONSOLE(238)] "
 %cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
-[10660:32736:1231/090739.365:INFO:CONSOLE(238)] "
+[21188:31712:1231/100114.791:INFO:CONSOLE(238)] "
 %c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
-[10660:32736:1231/090739.804:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.804:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.804:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.816:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.816:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.816:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.816:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.817:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090739.817:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090740.397:INFO:CONSOLE(532)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: https://static.xx.fbcdn.net/rsrc.php/v4igVm4/yZ/l/en_US/SFu4MGAI63yHijfSi0UmhohCQOR6PpBeSR2N0GEm5Zivxh8dfsLrCSHw2yXFFD1mxm5iYlDNQlXOzULt2R5YMf-nC4e8sPneil0oEKS_vRg9VjBAeeRiyVCZ2h_Uga27LsZqE1IXZcM635WVlPVLKsEoaggBlEJ8DL2JYZx3UNeWimTE7lVOoJSriwxwWzl5ay1mET0GvzogXkomqF1zB84vpQ7-zYmDX4_E38RbxScTZTOikUhO3f-hJxfx_n57TrEYti4mN9vVEOmX8lIkNXTAiF-9T2MTyEsF4IqFFJxvZKgQE-9VVyvnkkjh1d_FwWkcjVmZ4F.js?_nc_eui2=AeHM_cxgWEK7gTnmlnWf2NIs6LgGjn_IjGDouAaOf8iMYHtxX5Zgyna-a1xI5WDHEeohF_PZUjbpgTizqJ6BkCXn (532)
-[15600:13608:1231/090740.779:ERROR:gles2_cmd_decoder_passthrough.cc(1053)] [GroupMarkerNotSet(crbug.com/242999)!:A0F03100445B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.
-[10660:32736:1231/090740.794:INFO:CONSOLE(0)] "[GroupMarkerNotSet(crbug.com/242999)!:A0F03100445B0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.", source: https://business.facebook.com/latest/insights/video_earnings (0)
-[10660:32736:1231/090740.796:INFO:CONSOLE(528)] "
+[21188:31712:1231/100115.040:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.040:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.392:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.393:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.393:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.413:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.413:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.415:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100115.415:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100116.280:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100116.714:INFO:CONSOLE(49)] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4iY2m4/y9/l/rt/Jom8lU9q87Wzi2UzwRVfOcsNMeJkz90RCvsEqwZuf11uqubjGwY6-daTkdXnb59cMhqzsxY7X7YqjjkPXWDQjwnnOW6gT-9ZGFKS2hN8MLRGq9hsbn4nxmMQodnB8hGaGpVjvHp5sD-pW0wPeLKAWXLbsUOoHqCwvf_OIvXLgSDifMUUbqxwhUx8uN9gf1r0kvov5PUGgNvzUPCctg99kqxeVaHGhkV78lrPRMcGqcZEVjO99fRmW3JrvMPAl-i5ZtwZI6xWUrTP5g2My9x_7jtzZT0-QTE1hHt3E_efm9iyOYWm-fEbeVlOH5Ts3-CGsXcG4xa-CQ.js?_nc_eui2=AeFFmdCUUWNoH1pv1azCmdTn2I6aNybK9Q7Yjpo3Jsr1DiCxthyjCB9IAFAkphoMpSnyifJy3OpRXg3SPSK-mv1f (49)
+[21188:31712:1231/100117.258:INFO:CONSOLE(238)] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
+[21188:31712:1231/100117.258:INFO:CONSOLE(238)] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
+[21188:31712:1231/100117.258:INFO:CONSOLE(238)] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
+[21188:31712:1231/100117.258:INFO:CONSOLE(238)] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yJ/r/sCs_SFWyj76.js?_nc_eui2=AeGgQWegATTHi0XEqO1MDaTHstqv1RS5O-Wy2q_VFLk75ceUy3s5DtavmZyS4dUuaijBUTdWDNX5s8km4gS8g6yg (238)
+[21188:31712:1231/100117.902:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.903:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.903:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.914:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.914:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.914:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.914:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.915:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100117.915:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[21188:31712:1231/100118.579:INFO:CONSOLE(532)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: https://static.xx.fbcdn.net/rsrc.php/v4igVm4/yZ/l/en_US/SFu4MGAI63yHijfSi0UmhohCQOR6PpBeSR2N0GEm5Zivxh8dfsLrCSHw2yXFFD1mxm5iYlDNQlXOzULt2R5YMf-nC4e8sPneil0oEKS_vRg9VjBAeeRiyVCZ2h_Uga27LsZqE1IXZcM635WVlPVLKsEoaggBlEJ8DL2JYZx3UNeWimTE7lVOoJSriwxwWzl5ay1mET0GvzogXkomqF1zB84vpQ7-zYmDX4_E38RbxScTZTOikUhO3f-hJxfx_n57TrEYti4mN9vVEOmX8lIkNXTAiF-9T2MTyEsF4IqFFJxvZKgQE-9VVyvnkkjh1d_FwWkcjVmZ4F.js?_nc_eui2=AeHM_cxgWEK7gTnmlnWf2NIs6LgGjn_IjGDouAaOf8iMYHtxX5Zgyna-a1xI5WDHEeohF_PZUjbpgTizqJ6BkCXn (532)
+[21188:31712:1231/100119.823:INFO:CONSOLE(528)] "
 %cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4igVm4/yZ/l/en_US/SFu4MGAI63yHijfSi0UmhohCQOR6PpBeSR2N0GEm5Zivxh8dfsLrCSHw2yXFFD1mxm5iYlDNQlXOzULt2R5YMf-nC4e8sPneil0oEKS_vRg9VjBAeeRiyVCZ2h_Uga27LsZqE1IXZcM635WVlPVLKsEoaggBlEJ8DL2JYZx3UNeWimTE7lVOoJSriwxwWzl5ay1mET0GvzogXkomqF1zB84vpQ7-zYmDX4_E38RbxScTZTOikUhO3f-hJxfx_n57TrEYti4mN9vVEOmX8lIkNXTAiF-9T2MTyEsF4IqFFJxvZKgQE-9VVyvnkkjh1d_FwWkcjVmZ4F.js?_nc_eui2=AeHM_cxgWEK7gTnmlnWf2NIs6LgGjn_IjGDouAaOf8iMYHtxX5Zgyna-a1xI5WDHEeohF_PZUjbpgTizqJ6BkCXn (528)
-[10660:32736:1231/090740.796:INFO:CONSOLE(528)] "
+[21188:31712:1231/100119.823:INFO:CONSOLE(528)] "
 %cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4igVm4/yZ/l/en_US/SFu4MGAI63yHijfSi0UmhohCQOR6PpBeSR2N0GEm5Zivxh8dfsLrCSHw2yXFFD1mxm5iYlDNQlXOzULt2R5YMf-nC4e8sPneil0oEKS_vRg9VjBAeeRiyVCZ2h_Uga27LsZqE1IXZcM635WVlPVLKsEoaggBlEJ8DL2JYZx3UNeWimTE7lVOoJSriwxwWzl5ay1mET0GvzogXkomqF1zB84vpQ7-zYmDX4_E38RbxScTZTOikUhO3f-hJxfx_n57TrEYti4mN9vVEOmX8lIkNXTAiF-9T2MTyEsF4IqFFJxvZKgQE-9VVyvnkkjh1d_FwWkcjVmZ4F.js?_nc_eui2=AeHM_cxgWEK7gTnmlnWf2NIs6LgGjn_IjGDouAaOf8iMYHtxX5Zgyna-a1xI5WDHEeohF_PZUjbpgTizqJ6BkCXn (528)
-[10660:32736:1231/090740.796:INFO:CONSOLE(528)] "
+[21188:31712:1231/100119.823:INFO:CONSOLE(528)] "
 %cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4igVm4/yZ/l/en_US/SFu4MGAI63yHijfSi0UmhohCQOR6PpBeSR2N0GEm5Zivxh8dfsLrCSHw2yXFFD1mxm5iYlDNQlXOzULt2R5YMf-nC4e8sPneil0oEKS_vRg9VjBAeeRiyVCZ2h_Uga27LsZqE1IXZcM635WVlPVLKsEoaggBlEJ8DL2JYZx3UNeWimTE7lVOoJSriwxwWzl5ay1mET0GvzogXkomqF1zB84vpQ7-zYmDX4_E38RbxScTZTOikUhO3f-hJxfx_n57TrEYti4mN9vVEOmX8lIkNXTAiF-9T2MTyEsF4IqFFJxvZKgQE-9VVyvnkkjh1d_FwWkcjVmZ4F.js?_nc_eui2=AeHM_cxgWEK7gTnmlnWf2NIs6LgGjn_IjGDouAaOf8iMYHtxX5Zgyna-a1xI5WDHEeohF_PZUjbpgTizqJ6BkCXn (528)
-[10660:32736:1231/090740.796:INFO:CONSOLE(528)] "
+[21188:31712:1231/100119.823:INFO:CONSOLE(528)] "
 %c ", source: https://static.xx.fbcdn.net/rsrc.php/v4igVm4/yZ/l/en_US/SFu4MGAI63yHijfSi0UmhohCQOR6PpBeSR2N0GEm5Zivxh8dfsLrCSHw2yXFFD1mxm5iYlDNQlXOzULt2R5YMf-nC4e8sPneil0oEKS_vRg9VjBAeeRiyVCZ2h_Uga27LsZqE1IXZcM635WVlPVLKsEoaggBlEJ8DL2JYZx3UNeWimTE7lVOoJSriwxwWzl5ay1mET0GvzogXkomqF1zB84vpQ7-zYmDX4_E38RbxScTZTOikUhO3f-hJxfx_n57TrEYti4mN9vVEOmX8lIkNXTAiF-9T2MTyEsF4IqFFJxvZKgQE-9VVyvnkkjh1d_FwWkcjVmZ4F.js?_nc_eui2=AeHM_cxgWEK7gTnmlnWf2NIs6LgGjn_IjGDouAaOf8iMYHtxX5Zgyna-a1xI5WDHEeohF_PZUjbpgTizqJ6BkCXn (528)
-[10660:32736:1231/090743.506:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 02:07:35.504683 UTC, pending_favicon_request_start_time_=2024-12-31 02:07:40.987687 UTC
-[10660:32736:1231/090743.507:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 02:07:37.426876 UTC, pending_favicon_request_start_time_=2024-12-31 02:07:40.987687 UTC
-[10660:32736:1231/090743.507:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 02:07:37.667653 UTC, pending_favicon_request_start_time_=2024-12-31 02:07:40.987687 UTC
-[10660:32736:1231/090743.507:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 02:07:39.410502 UTC, pending_favicon_request_start_time_=2024-12-31 02:07:40.987686 UTC
-[32320:10144:1231/090743.555:INFO:extractor_impl.cc(983)] ExtractorImpl::SetIsPendingEEConfig : 1
-[10660:32736:1231/090743.663:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090743.930:WARNING:underside_helper.cc(1563)] If test does not need FrontLoad, this may be expected. SetFrontLoadDecision: 8
-[10660:32736:1231/090750.396:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090750.995:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090750.995:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090802.322:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090802.322:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090802.322:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090802.322:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090805.401:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/090835.564:WARNING:cloud_config_service.cc(215)] No subscription found for operation_config. Skip fetching it. If you are interested for this change, please subscribe beforehand.
-[10660:32736:1231/091821.350:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/091821.350:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/091821.992:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/091822.140:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.141:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.146:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.147:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.150:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.150:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.151:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.153:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.157:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.158:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.180:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.181:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.182:WARNING:CONSOLE(9)] "-ms-high-constrast is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091822.182:WARNING:CONSOLE(9)] "-ms-high-contrast-adjust is in the process of being deprecated. Please see https://blogs.windows.com/msedgedev/2024/04/29/deprecating-ms-high-contrast/ for tips on updating to the new Forced Colors Mode standard.", source: edge://downloads/downloads.bundle.js (9)
-[10660:32736:1231/091829.984:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/091829.984:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
-[10660:32736:1231/091830.018:WARNING:pref_notifier_impl.cc(41)] Pref observer for video_enhancement.mode found at shutdown.
-[3440:28976:1231/091830.030:WARNING:sqlite_persistent_store_backend_base.cc(202)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:258 to client_task_runner_.
-[3440:28976:1231/091830.030:WARNING:sqlite_persistent_store_backend_base.cc(202)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:258 to client_task_runner_.
-[10660:32736:1231/091830.065:WARNING:pref_notifier_impl.cc(41)] Pref observer for browser.touch_mode found at shutdown.
+[21188:31712:1231/100122.698:WARNING:underside_helper.cc(1563)] If test does not need FrontLoad, this may be expected. SetFrontLoadDecision: 8
+[21188:31712:1231/100122.699:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 03:01:12.294352 UTC, pending_favicon_request_start_time_=2024-12-31 03:01:17.917725 UTC
+[21188:31712:1231/100122.699:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 03:01:12.876781 UTC, pending_favicon_request_start_time_=2024-12-31 03:01:17.917725 UTC
+[21188:31712:1231/100122.699:WARNING:wtm_image_web_contents_helper.cc(848)] Favicon request has been preempted. Skipping.  old request_start_time=2024-12-31 03:01:15.418640 UTC, pending_favicon_request_start_time_=2024-12-31 03:01:17.917725 UTC
+[21188:31712:1231/100122.723:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5
+[5596:31672:1231/100122.748:INFO:extractor_impl.cc(983)] ExtractorImpl::SetIsPendingEEConfig : 1
+[21188:31712:1231/100127.175:WARNING:pref_value_store.cc(271)] Expected type for safebrowsing.enabled is boolean but got string in store 5

@@ -1,2 +1,6 @@
-2024/12/31-09:07:35.428 2a8c Creating DB C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\Local Storage\leveldb since it was missing.
-2024/12/31-09:07:35.452 2a8c Reusing MANIFEST C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\Local Storage\leveldb/MANIFEST-000001
+2024/12/31-10:01:12.204 7ef8 Reusing MANIFEST C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\Local Storage\leveldb/MANIFEST-000001
+2024/12/31-10:01:12.209 7ef8 Recovering log #3
+2024/12/31-10:01:12.211 7ef8 Reusing old log C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\Local Storage\leveldb/000003.log 
+2024/12/31-10:01:23.222 436c Level-0 table #5: started
+2024/12/31-10:01:23.234 436c Level-0 table #5: 39874 bytes OK
+2024/12/31-10:01:23.240 436c Delete type=0 #3

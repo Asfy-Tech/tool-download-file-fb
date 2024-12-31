@@ -1,2 +1,3 @@
-2024/12/31-09:07:43.532 12d0 Creating DB C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\EdgeCoupons/coupons_data.db since it was missing.
-2024/12/31-09:07:43.541 12d0 Reusing MANIFEST C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2024/12/31-10:01:22.709 56fc Reusing MANIFEST C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2024/12/31-10:01:22.716 56fc Recovering log #3
+2024/12/31-10:01:22.717 56fc Reusing old log C:\Users\Admin\OneDrive\Máy tính\Workspace\CrawFacebookNotLogin\download\terminal\profiles\profile_50c7815b-ebb3-4dfd-8d80-261a58ec10d3\Default\EdgeCoupons/coupons_data.db/000003.log 

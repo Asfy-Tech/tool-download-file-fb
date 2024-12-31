@@ -1,6 +1,6 @@
 selenium
 requests
-webdriver-manager
+# webdriver-manager
 inquirer
 rich
 pytz
