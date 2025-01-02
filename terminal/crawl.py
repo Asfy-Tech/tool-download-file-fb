@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from time import sleep,time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from terminal.modal import closeModal
+from terminal.modal import clickText
 from terminal.files import FileDownloadHandler
 import os
 
@@ -24,7 +24,7 @@ class Crawl:
             # Redirect to business
             self.driver.get('https://business.facebook.com/latest/insights/video_earnings')
             sleep(3)
-            closeModal(0, self.driver)
+            clickText('Dissmiss', self.driver)
             sleep(2)
             self.crawl()
 
