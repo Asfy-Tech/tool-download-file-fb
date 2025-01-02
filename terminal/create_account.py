@@ -131,7 +131,7 @@ def check_login(account):
         )
         check = True
     except Exception as e:
-        print(f"Lỗi khi check login: {str(e)}")
+        print(f"Không thể login tài khoản: {account['name']}")
     finally:
         driver.quit()
     
