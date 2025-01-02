@@ -74,6 +74,6 @@ class CronJobManager:
             schedule.run_pending()
             time.sleep(1)
 
-if __name__ == "__main__":
+def main():
     manager = CronJobManager(db_file='db.json')
     manager.run()
