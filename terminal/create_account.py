@@ -222,6 +222,6 @@ def switch_account(account):
                 console.print(f"Lỗi: {str(e)}", style="bold red")
         elif choice == 'Lấy dữ liệu ngay':
             from terminal.crawl import Crawl
-            crawl = Crawl(account,True)
+            crawl = Crawl(account,False)
             crawl.run()
 
