@@ -81,17 +81,13 @@ class Crawl:
         except Exception as e:
             raise Exception(f"Failed to find modal list pages: {str(e)}")
         
+        pages = modal_pages.find_elements(By.XPATH, './/*[@aria-selected="false"]')
+        for page in pages:
+            page.click()
+            sleep(0.5)
 
-        try:
-            all_pages = modal_pages.find_element(By.XPATH, './/*[@aria-checked="false"]')
-            all_pages.click()
-            print('Select all pages successfully!')
-        except Exception as e:
-            raise Exception(f"Failed to find button select all pages: {str(e)}")
-        
-        # all_pages = modal_pages.find_element(By.XPATH, './/*[@aria-checked="false"]')
-        # all_pages.click()
-        
+        open_pages.click()
+        print('Select pages successfully!')
 
         values = ['DAILY','ASSET','ACTIVITY']
         # values = ['DAILY','ASSET']
@@ -120,7 +116,7 @@ class Crawl:
         matrics = modal_matrics.find_elements(By.XPATH, './/*[@aria-selected="false"]')
         for matric in matrics:
             matric.click()
-            sleep(1)
+            sleep(0.5)
         print('Select matrics successfully!')
 
         
