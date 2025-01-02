@@ -89,6 +89,7 @@ class Crawl:
             sleep(0.5)
 
         open_pages.click()
+        sleep(1)
         print('Select pages successfully!')
 
         values = ['DAILY','ASSET','ACTIVITY']
@@ -180,7 +181,7 @@ class Crawl:
             res = handleFile.send_file_to_server(last_file, 'https://admin.rovegl.com/api/receive-excel-data-file')
             
             # Xóa tệp sau khi gửi
-            # handleFile.remove_file(last_file)
+            handleFile.remove_file(last_file)
             
             print(f"File uploaded successfully ==> {self.account['name']}")
 
