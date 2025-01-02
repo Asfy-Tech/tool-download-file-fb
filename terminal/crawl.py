@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from time import sleep,time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from terminal.modal import closeModal
 from terminal.files import FileDownloadHandler
 import os
 
@@ -22,8 +23,9 @@ class Crawl:
             self.login()
             # Redirect to business
             self.driver.get('https://business.facebook.com/latest/insights/video_earnings')
-            sleep(5)
-
+            sleep(3)
+            closeModal(0, self.driver)
+            sleep(2)
             self.crawl()
 
         except Exception as e:
