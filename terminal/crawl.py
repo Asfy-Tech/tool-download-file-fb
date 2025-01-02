@@ -182,17 +182,17 @@ class Crawl:
             # Xóa tệp sau khi gửi
             handleFile.remove_file(last_file)
             
-            print(f"File uploaded successfully!")
+            print(f"File uploaded successfully ==> {self.account['name']}")
 
             # Kiểm tra xem phản hồi có phải là JSON và in ra
             try:
                 print(res.json())  # In ra dữ liệu JSON nếu có
             except ValueError:  # Catch lỗi nếu response không phải là JSON
                 print(res.text)  # In ra nội dung response dưới dạng văn bản (text)
-                
+            
         except Exception as e:
             # Xử lý bất kỳ lỗi nào xảy ra trong quá trình gửi tệp
-            print(f"An error occurred: {str(e)}")
+            print(f"( {self.account['name']} ) An error occurred: {str(e)}")
         
         sleep(3)
 
