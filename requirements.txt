@@ -1,7 +1,10 @@
+webdriver-manager
 selenium
+dateparser
 requests
-# webdriver-manager
+pillow
+pywin32
+pyautogui
 inquirer
+psutil
 rich
-pytz
-schedule

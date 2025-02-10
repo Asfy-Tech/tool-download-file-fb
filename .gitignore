@@ -1,3 +1,5 @@
-terminal/profiles/*
 __pycache__
-db.json
+data.csv
+build
+dist
+temp

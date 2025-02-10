@@ -1,42 +1,19 @@
-import inquirer
-from rich.console import Console
-from rich.panel import Panel
-from rich.text import Text
-from terminal.accounts import Account
-from terminal.create_account import create_account
-from terminal.create_account import input_account
-from terminal.create_account import check_login
-from terminal.create_account import switch_account
-from terminal.create_account import question_account
-from cronjob import main as cronjob_main
+from helpers.base import render
+from pages.menu import setup_menu
+from main.root import get_root,setup_gui
+from helpers.log import config_log
 
 
-def main():
-    console = Console()
-    console.print(Panel("Chọn một hành động:", style="bold green"))
-
-    choices = [
-        "Danh sách tài khoản",
-        "Chạy cronjob",
-        "Thoát"
-    ]
-    
-    action_question = inquirer.List('action', message="Bạn muốn làm gì", choices=choices, carousel=True)
-    
-    answers = inquirer.prompt([action_question])
-
-    if answers:
-        action = answers['action']
-        console.print(f"[bold green]Bạn đã chọn:[/] {action}")
-        
-        if action == "Danh sách tài khoản":
-            question_account()
-        elif action == "Chạy cronjob":
-            cronjob_main()
-        else:
-            console.print("Thoát chương trình.")
-    else:
-        console.print("Bạn đã hủy chọn.")
-        
 if __name__ == "__main__":
-    main()
+    config_log()
+
+    root = get_root()
+
+    setup_menu()
+
+    setup_gui()
+    
+    render('home')
+
+    root.mainloop()
+

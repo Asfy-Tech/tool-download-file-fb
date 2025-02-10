@@ -6,8 +6,13 @@ from time import sleep,time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from terminal.modal import clickText
+from tkinter import messagebox
 from terminal.files import FileDownloadHandler
 import os
+from sql.account import Account
+import pytz
+from datetime import datetime
+
 
 class Crawl:
     def __init__(self, account, headless=False):
@@ -27,11 +32,17 @@ class Crawl:
             clickText('Dissmiss', self.driver)
             sleep(2)
             self.crawl()
-
         except Exception as e:
+            messagebox.showerror('Thất bại','Download file thất bại')
             print(f"Failed to run crawl for account: {self.account['name']}")
             print(str(e))
         finally:
+            accounts = Account()
+            vn_tz = pytz.timezone('Asia/Ho_Chi_Minh')
+            now = datetime.now(vn_tz)
+            formatted_time = now.strftime('%d-%m-%Y %H:%M')
+            self.account['last_run'] = formatted_time
+            accounts.update(self.account)
             self.driver.quit()
 
     def login(self):
@@ -199,7 +210,7 @@ class Crawl:
 
 
     def save_login(self):
-        from terminal.accounts import Account
+        from sql.account import Account
         account_instance = Account()
         accounts = account_instance.get()
         try:
@@ -212,7 +223,7 @@ class Crawl:
             cookies = self.driver.get_cookies()
 
             # Cập nhật cookie cho tài khoản trùng id
-            for acc in accounts:
+            for acc in accounts:    
                 if acc['id'] == self.account['id']:
                     acc['cookies'] = cookies
                     print(f"Updated cookies for account: {acc['name']}")
