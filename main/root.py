@@ -8,7 +8,7 @@ def create_app():
     """Tạo cửa sổ ứng dụng chính."""
     root = tk.Tk()
     root.title("Ứng dụng Quản lý")
-    root.geometry("1400x600")  # Tăng chiều cao cửa sổ
+    root.geometry("1000x500")  # Tăng chiều cao cửa sổ
     root.config(bg="#f0f2f5")  # Màu nền của Facebook (#f0f2f5)
     return root
 

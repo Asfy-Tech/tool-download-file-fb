@@ -11,13 +11,13 @@ accounts_process_instance = get_accounts_process_instance()
 
 def accounts_page():
     frame = get_frame()
-    label = tk.Label(frame, text="Danh sách tài khoản", font=("Segoe UI", 20), bg="#f0f2f5")
-    label.pack(pady=20)
+    # label = tk.Label(frame, text="Danh sách tài khoản", font=("Segoe UI", 20), bg="#f0f2f5")
+    # label.pack(pady=20)
     accounts = accounts_process_instance.get_all_processes()
 
     # Add label to show the number of active processes
-    total_process_label = tk.Label(frame, text=f"Số tài khoản đang chạy: {len(accounts)}", font=("Segoe UI", 12), bg="#f0f2f5", fg="#1c1e21")
-    total_process_label.pack(pady=10)
+    # total_process_label = tk.Label(frame, text=f"Số tài khoản đang chạy: {len(accounts)}", font=("Segoe UI", 12), bg="#f0f2f5", fg="#1c1e21")
+    # total_process_label.pack(pady=10)
 
     # Display account list as a table
     if len(accounts) > 0:

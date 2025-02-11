@@ -12,12 +12,11 @@ from tkinter import ttk
 import os
 
 # Lưu cấu hình (chỉ lưu headless)
-def save_configuration(headless_var,omocaptcha_token_var):
+def save_configuration(headless_var):
     from helpers.base import render
 
     def save_config(headless_var):
         headless = headless_var.get()
-        omocaptcha_token = omocaptcha_token_var.get()
 
         try:
             # Lưu thông tin cấu hình vào file config.json
@@ -26,7 +25,6 @@ def save_configuration(headless_var,omocaptcha_token_var):
 
             # Cập nhật chỉ trường "headless" mà không thay đổi các thông tin khác
             config["headless"] = headless
-            config["omocaptcha_token"] = omocaptcha_token
 
             with open("config.json", "w") as config_file:
                 json.dump(config, config_file, indent=4)
@@ -134,12 +132,6 @@ def settings_page():
 
     current_config = config()
 
-    # Tiêu đề trang
-    title_label = tk.Label(
-        main_frame, text="Cấu hình Đăng nhập", font=("Segoe UI", 20, "bold"), bg="#f0f2f5"
-    )
-    title_label.pack(pady=20)
-
     display_current_config(main_frame, current_config)
 
     # Tùy chọn chế độ headless (Bật/tắt giao diện)
@@ -151,16 +143,6 @@ def settings_page():
         style="Custom.TCheckbutton"
     )
     headless_check.pack(pady=5)
-
-    # Thêm ô nhập cho omocaptcha_token
-    token_label = tk.Label(
-        main_frame, text="OmoCaptcha Token:", font=("Segoe UI", 12), bg="#f0f2f5"
-    )
-    token_label.pack(pady=5)
-    omocaptcha_token_var = tk.StringVar(value=current_config.get("omocaptcha_token", ""))
-    token_entry = ttk.Entry(main_frame, textvariable=omocaptcha_token_var, width=100)
-    token_entry.pack(pady=5)
-
     # Khởi tạo frame để chứa các nút
     button_frame = tk.Frame(main_frame, bg="#f0f2f5")
     button_frame.pack(pady=10)
@@ -170,7 +152,7 @@ def settings_page():
         button_frame,
         text="Lưu cấu hình",
         style="Custom.TButton",
-        command=lambda: save_configuration(headless_var,omocaptcha_token_var),
+        command=lambda: save_configuration(headless_var),
         width=15  # Giảm kích thước nút
     )
     save_button.pack(side=tk.LEFT, padx=5)
@@ -207,10 +189,10 @@ def settings_page():
 def display_current_config(main_frame, current_config):
     if current_config:
         # Tạo tiêu đề và bảng hiển thị cấu hình
-        tk.Label(main_frame, text="Cấu hình hiện tại:", font=("Segoe UI", 14, "bold"), bg="#f0f2f5", fg="#1c1e21").pack(pady=10)
+        tk.Label(main_frame, text="Cấu hình hiện tại:", font=("Segoe UI", 14, "bold"), bg="#f0f2f5", fg="#1c1e21").pack(pady=20)
         
         config_tree = ttk.Treeview(main_frame, columns=("Key", "Value"), show="headings", style="Custom.Treeview")
-        config_tree.pack(fill=tk.X, pady=10)
+        config_tree.pack(fill=tk.X, pady=20)
         
         # Định dạng cột và tiêu đề
         config_tree.heading("Key", text="Key", anchor=tk.W)
@@ -221,10 +203,9 @@ def display_current_config(main_frame, current_config):
         # Thêm dữ liệu vào bảng
         config_tree.insert("", "end", values=("Mở giao diện", "Có" if current_config.get("headless", False) else "Không"))
         config_tree.insert("", "end", values=("Driver path", current_config.get("driver_path", "Chưa có")))
-        config_tree.insert("", "end", values=("Omocaptcha Token", current_config.get("omocaptcha_token", "Chưa có")))
 
         # Cấu hình style
         style = ttk.Style()
-        style.configure("Custom.Treeview", background="#f0f2f5", foreground="#000000", fieldbackground="#f0f2f5", rowheight=20)
+        style.configure("Custom.Treeview", background="#f0f2f5", foreground="#000000", fieldbackground="#f0f2f5", rowheight=10)
         style.configure("Custom.Treeview.Heading", background="#4CAF50", foreground="#000000", font=("Segoe UI", 12, "bold"))
         style.map("Custom.Treeview", background=[('selected', '#A9D08E')])
