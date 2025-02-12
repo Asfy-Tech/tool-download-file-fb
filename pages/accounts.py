@@ -82,6 +82,10 @@ def accounts_page():
             fetch_button = ttk.Button(button_frame, text="Lấy dữ liệu ngay", style="Custom.TButton", command=lambda account=account: fetch_data(account))
             fetch_button.pack(side="left", padx=5)
 
+            # Fetch data button (immediate action)
+            fetch_button = ttk.Button(button_frame, text="Xoá", style="Custom.TButton", command=lambda account=account: remove_account(account))
+            fetch_button.pack(side="left", padx=5)
+
             account['row'] = row  # Store the row for possible updates later
 
         table_inner_frame.update_idletasks()
@@ -103,6 +107,13 @@ def accounts_page():
     back_button.pack(side="right", padx=5, expand=True)
 
     return frame
+
+def remove_account(account):
+    from main.root import restart_application
+    from sql.account import Account
+    accounts = Account()
+    accounts.destroy(account)
+    restart_application()
 
 import re
 def update_cron_time(account):

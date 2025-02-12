@@ -13,4 +13,9 @@ def login(account):
     except Exception as e:
         print(f"Lỗi: {str(e)}")
     crawl.save_login()
-    messagebox.showinfo("Thành công", "Đăng nhập thành công!")
+    try:
+        crawl.driver.find_element(By.XPATH,"//meta[@name='viewport']")
+        messagebox.showinfo("Thành công", "Đăng nhập thành công!")
+    except Exception as e:
+        print(f"Failed to login for account: {e}")
+        messagebox.showerror("Thất bại", "Đăng nhập thất bại!")

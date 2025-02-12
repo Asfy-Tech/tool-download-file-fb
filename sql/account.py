@@ -32,6 +32,12 @@ class Account:
         if acc:
             self.accounts[account.get('id')] = account
         self.save()
+    
+    def destroy(self, account):
+        acc = self.accounts.get(account.get('id'))
+        if acc:
+            del self.accounts[account.get('id')]  # Xóa phần tử khỏi dictionary
+        self.save()
 
     def save(self):
         data = []

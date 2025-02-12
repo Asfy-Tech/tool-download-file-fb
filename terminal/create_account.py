@@ -12,6 +12,7 @@ from terminal.files import FileDownloadHandler
 def create_browser(headless=False,profile_dir=''):
     from helpers.base import config
     
+    print(profile_dir)
     options = Options()
     headlessConfig = config('headless')
     if headless or not headlessConfig:

@@ -22,7 +22,9 @@ def closeModal(index, browser):
 
 def clickText(text, browser):
     try:
+        print(f"Click thẻ chứ text: {text}")
         element = browser.find_element(By.XPATH, f"//*[contains(text(), '{text}')]")
         element.click()  # Thực hiện click vào thẻ (nếu cần)
+        sleep(2)
     except Exception as e:
         print("Không tìm thấy thẻ chứa text:")

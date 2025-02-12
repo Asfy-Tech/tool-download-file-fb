@@ -45,8 +45,12 @@ VN_TIMEZONE = pytz.timezone("Asia/Ho_Chi_Minh")
 
 # Biến toàn cục để kiểm soát trạng thái chạy của các thread
 running = True
+main_root_label = None
+update_job_id = None
 
 def init_cronjob(root_label):
+    global main_root_label
+    main_root_label = root_label
     from sql.account import Account
     accounts_instance = Account()
     from terminal.crawl import Crawl
@@ -64,6 +68,8 @@ def init_cronjob(root_label):
     accounts = accounts_instance.get_all()
 
     cron_jobs_info = []
+
+    schedule.clear()
     
     # Lập lịch cho mỗi tài khoản
     for idx, acc in accounts.items():
@@ -81,6 +87,7 @@ def init_cronjob(root_label):
 
     # Hàm cập nhật thời gian và các cron job
     def update_label():
+        global update_job_id
         now_local = datetime.datetime.now(VN_TIMEZONE).strftime('%Y-%m-%d %H:%M:%S')
         cron_job_info_str = "\n".join(cron_jobs_info) if cron_jobs_info else "No cron jobs scheduled."
         root_label.pack(anchor='w', padx=10, pady=10)
@@ -88,8 +95,11 @@ def init_cronjob(root_label):
             text=f"Current Time: {now_local}\n\nCron Jobs:\n{cron_job_info_str}",
             font=("Helvetica", 10)
         )
-        
-        root_label.after(1000, update_label)  # Cập nhật sau mỗi 1 giây
+        if update_job_id is not None: 
+            root_label.after_cancel(update_job_id)
+            update_job_id = None
+
+        update_job_id = root_label.after(1000, update_label)  # Cập nhật sau mỗi 1 giây
 
     update_label()
 
@@ -114,15 +124,17 @@ def init_cronjob(root_label):
     # Thiết lập sự kiện đóng cửa sổ
     root_label.winfo_toplevel().protocol("WM_DELETE_WINDOW", on_close)
 
-import os
-import sys
 def restart_application():
+    global main_root_label
     """Dừng ứng dụng và khởi động lại."""
-    global running
-    running = False 
+    init_cronjob(main_root_label)
+    from helpers.base import render
+    render('accounts') 
+    # global running
+    # running = False 
 
-    python = sys.executable
-    os.execl(python, python, *sys.argv)
+    # python = sys.executable
+    # os.execl(python, python, *sys.argv)
 
 from main.root import get_root
 

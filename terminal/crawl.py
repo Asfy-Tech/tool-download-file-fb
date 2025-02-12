@@ -17,7 +17,7 @@ from datetime import datetime
 class Crawl:
     def __init__(self, account, headless=False):
         self.account = account
-        current_dir = os.path.dirname(os.path.abspath(__file__))
+        current_dir = os.path.abspath("./temp")
         profile_dir = os.path.join(current_dir, "profiles", f"profile_{account.get('id')}")
         os.makedirs(profile_dir, exist_ok=True)
         self.driver = create_browser(headless,profile_dir)
@@ -61,6 +61,7 @@ class Crawl:
         
     def crawl(self):
         try:
+            print('Click Export data')
             # Click button export
             export_button = self.driver.find_element(By.XPATH, "//*[contains(text(), 'Export data')]")
             try:
@@ -68,6 +69,7 @@ class Crawl:
                 print('Open modal export successfully!')
             except Exception as e:
                 print("Element was blocked or not clickable, trying to click elsewhere.")
+                print('Click body')
                 body = self.driver.find_element(By.TAG_NAME, 'body')
                 body.click()  
                 export_button.click()
@@ -212,7 +214,7 @@ class Crawl:
     def save_login(self):
         from sql.account import Account
         account_instance = Account()
-        accounts = account_instance.get()
+        accounts = account_instance.get_all()
         try:
             # Đợi cho thẻ meta[@name='viewport'] xuất hiện (timeout 1000 giây)
             WebDriverWait(self.driver, 1000).until(
