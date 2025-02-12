@@ -35,7 +35,7 @@ class Crawl:
         except Exception as e:
             messagebox.showerror('Thất bại','Download file thất bại')
             print(f"Failed to run crawl for account: {self.account['name']}")
-            print(str(e))
+            print(e)
         finally:
             accounts = Account()
             vn_tz = pytz.timezone('Asia/Ho_Chi_Minh')
@@ -74,14 +74,14 @@ class Crawl:
                 body.click()  
                 export_button.click()
         except Exception as e:
-            raise Exception(f"Failed to click button export : {str(e)}")
+            raise Exception(f"Failed to click button export : {e}")
         
         try:
             modal = self.driver.find_element(By.XPATH, "//*[@role='dialog' and @data-interactable='|keydown|']")
             print('Get modal export successfully!')
             sleep(5)
         except Exception as e:
-            raise Exception(f"Failed to find modal: {str(e)}")
+            raise Exception(f"Failed to find modal: {e}")
         
         try:
             open_pages = modal.find_element(By.XPATH, ".//*[@aria-haspopup='listbox']")
@@ -89,12 +89,12 @@ class Crawl:
             print('Open modal pages successfully!')
             sleep(3)
         except Exception as e:
-            raise Exception(f"Failed to find button open page: {str(e)}")
+            raise Exception(f"Failed to find button open page: {e}")
         
         try:
             modal_pages = self.driver.find_element(By.XPATH, '//*[@data-testid="ContextualLayerRoot"]')
         except Exception as e:
-            raise Exception(f"Failed to find modal list pages: {str(e)}")
+            raise Exception(f"Failed to find modal list pages: {e}")
         
         pages = modal_pages.find_elements(By.XPATH, './/*[@aria-selected="false"]')
         for page in pages:
@@ -113,7 +113,7 @@ class Crawl:
                 selected_value.click()
                 sleep(1)
             except Exception as e:
-                raise Exception(f"Failed to find button open {value}: {str(e)}")
+                raise Exception(f"Failed to find button open {value}: {e}")
         print('Select values successfully!')
             
         listbox = modal.find_elements(By.XPATH, ".//*[@aria-haspopup='listbox']")
@@ -123,12 +123,12 @@ class Crawl:
             print('Open modal metric successfully!')
             sleep(3)
         else:
-            raise Exception(f"Failed to find button open list metric: {str(e)}")   
+            raise Exception(f"Failed to find button open list metric: {e}")   
         
         try:
             modal_matrics = self.driver.find_element(By.XPATH, '//*[@data-testid="ContextualLayerRoot"]')
         except Exception as e:
-            raise Exception(f"Failed to find modal list matrics: {str(e)}")
+            raise Exception(f"Failed to find modal list matrics: {e}")
         matrics = modal_matrics.find_elements(By.XPATH, './/*[@aria-selected="false"]')
         for matric in matrics:
             matric.click()
@@ -144,7 +144,7 @@ class Crawl:
                 sleep(3)
                 print('Open modal days successfully!')
         except Exception as e:
-            raise Exception(f"Failed to find button open days: {str(e)}")
+            raise Exception(f"Failed to find button open days: {e}")
         
         try:
             modal_pages = self.driver.find_element(By.XPATH, '//*[@data-testid="ContextualLayerRoot"]')
@@ -153,7 +153,7 @@ class Crawl:
             sleep(1)
             print('Select 7 days successfully!')
         except Exception as e:
-            print(f"Failed to find modal list pages: {str(e)}")
+            print(f"Failed to find modal list pages: {e}")
             
         try:
             button = modal.find_element(By.XPATH, ".//*[contains(text(), 'Generate')]")
@@ -161,7 +161,7 @@ class Crawl:
             sleep(5)
             print('Button generate clicked successfully!')
         except Exception as e:
-            raise Exception(f"Failed to find button submit: {str(e)}")
+            raise Exception(f"Failed to find button submit: {e}")
         
 
         max_wait_time = 1800
@@ -185,7 +185,7 @@ class Crawl:
                 sleep(1)
             print("Download button clicked successfully !")
         except Exception as e:
-            raise Exception(f"Failed to find modal file download: {str(e)}")
+            raise Exception(f"Failed to find modal file download: {e}")
         
         last_file = handleFile.wait_for_file_download()
 
@@ -194,7 +194,7 @@ class Crawl:
             res = handleFile.send_file_to_server(last_file, 'https://admin.rovegl.com/api/receive-excel-data-file')
             
             # Xóa tệp sau khi gửi
-            handleFile.remove_file(last_file)
+            # handleFile.remove_file(last_file)
             
             print(f"File uploaded successfully ==> {self.account['name']}")
 
@@ -206,7 +206,7 @@ class Crawl:
             
         except Exception as e:
             # Xử lý bất kỳ lỗi nào xảy ra trong quá trình gửi tệp
-            print(f"( {self.account['name']} ) An error occurred: {str(e)}")
+            print(f"( {self.account['name']} ) An error occurred: {e}")
         
         sleep(3)
 
@@ -221,22 +221,42 @@ class Crawl:
                 EC.presence_of_element_located((By.XPATH, "//*[@aria-posinset]"))
             )
 
+            try:
+                element = WebDriverWait(self.driver, 5).until(
+                    EC.presence_of_element_located((By.XPATH, '//*[@aria-label="Save your password"]'))
+                )
+                saveButtons = element.find_elements(By.XPATH, ".//*[contains(text(), 'Save')]")
+                for saveBTN in saveButtons:
+                    try:
+                        saveBTN.click()
+                    except Exception as ex:
+                        continue
+                print('Click save')
+            except Exception as exc:
+                print(f'Error Click Save')
+            sleep(5)
+            try:
+                okButton = self.driver.find_element(By.XPATH, '//*[@aria-label="OK"]')
+                okButton.click()
+                print('Click OK')
+            except Exception as exc:
+                print(f'Error Click OK')
+
             # Lấy cookies
             cookies = self.driver.get_cookies()
 
-            # Cập nhật cookie cho tài khoản trùng id
-            for acc in accounts:    
-                if acc['id'] == self.account['id']:
-                    acc['cookies'] = cookies
-                    print(f"Updated cookies for account: {acc['name']}")
+            acc = accounts.get(self.account['id'])
 
-            account_instance.save()
+            if acc:
+                acc['cookies'] = cookies
+                account_instance.update(acc)
+                print(f"Updated cookies for account: {acc['name']}")
+
             print('Update cookie successfully for account: ', self.account['name'])
         except Exception as e:
             print(f"Failed to save login for account: {self.account['name']}")
-            print(str(e))
-        finally:
-            self.driver.quit()
+            print(e)
+
 
 
 

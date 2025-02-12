@@ -56,7 +56,7 @@ def init_cronjob(root_label):
     from terminal.crawl import Crawl
 
     def job(account):
-        crawl = Crawl(account, True)
+        crawl = Crawl(account)
         crawl.run()
 
     def run_threaded(job_func, *args, **kwargs):
