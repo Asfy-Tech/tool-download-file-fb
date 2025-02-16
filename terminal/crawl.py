@@ -5,12 +5,15 @@ from selenium.webdriver.common.by import By
 from time import sleep,time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 from terminal.modal import clickText
 from tkinter import messagebox
 from terminal.files import FileDownloadHandler
 import os
 from sql.account import Account
 import pytz
+import logging
+import threading
 from datetime import datetime
 
 
@@ -96,12 +99,35 @@ class Crawl:
         except Exception as e:
             raise Exception(f"Failed to find modal list pages: {e}")
         
-        pages = modal_pages.find_elements(By.XPATH, './/*[@aria-selected="false"]')
-        for page in pages:
-            page.click()
-            sleep(0.5)
+        for i in range(3):
+            try:
+                checkAll = modal_pages.find_element(By.XPATH, './/input[@type="checkbox" and @aria-checked="true"]')
+                break
+            except Exception as e:
+                sleep(1)
+                try:
+                    btn_all_page = modal_pages.find_element(By.XPATH, './/input[@type="checkbox" and @aria-checked="false"]')
+                    btn_all_page.click()
+                except Exception as e:
+                    print(e)
 
-        open_pages.click()
+        # pages = modal_pages.find_elements(By.XPATH, './/*[@aria-selected="false"]')
+        # print(f'Len page: {len(pages)}')
+        # for page in pages:
+        #     try:
+        #         ActionChains(self.driver).move_to_element(page)
+        #         page.click()
+        #         sleep(0.5)
+        #     except Exception as e:
+        #         pass
+        # sleep(10000)
+        
+        sleep(1)
+
+        try:
+            open_pages.click()
+        except Exception as e:
+            pass
         sleep(1)
         print('Select pages successfully!')
 
@@ -131,8 +157,11 @@ class Crawl:
             raise Exception(f"Failed to find modal list matrics: {e}")
         matrics = modal_matrics.find_elements(By.XPATH, './/*[@aria-selected="false"]')
         for matric in matrics:
-            matric.click()
-            sleep(0.5)
+            try:
+                matric.click()
+                sleep(0.5)
+            except Exception as e:
+                pass
         print('Select matrics successfully!')
 
         
@@ -190,13 +219,23 @@ class Crawl:
         last_file = handleFile.wait_for_file_download()
 
         try:
+            threading.Thread(target=self.upload_file, args=(last_file,)).start()
+        except Exception as e:
+            print(f"( {self.account['name']} ) An error occurred: {e}")
+        
+        sleep(3)
+        
+    def upload_file(self, file_path):
+        handleFile = FileDownloadHandler()
+        try:
             # Gửi tệp lên server
-            res = handleFile.send_file_to_server(last_file, 'https://admin.rovegl.com/api/receive-excel-data-file')
+            res = handleFile.send_file_to_server(file_path, 'https://admin.rovegl.com/api/receive-excel-data-file')
             
             # Xóa tệp sau khi gửi
-            # handleFile.remove_file(last_file)
+            handleFile.remove_file(file_path)
             
             print(f"File uploaded successfully ==> {self.account['name']}")
+            logging.info(f"File uploaded successfully ==> {self.account['name']}")
 
             # Kiểm tra xem phản hồi có phải là JSON và in ra
             try:
@@ -207,8 +246,6 @@ class Crawl:
         except Exception as e:
             # Xử lý bất kỳ lỗi nào xảy ra trong quá trình gửi tệp
             print(f"( {self.account['name']} ) An error occurred: {e}")
-        
-        sleep(3)
 
 
     def save_login(self):
@@ -251,7 +288,6 @@ class Crawl:
                 acc['cookies'] = cookies
                 account_instance.update(acc)
                 print(f"Updated cookies for account: {acc['name']}")
-
             print('Update cookie successfully for account: ', self.account['name'])
         except Exception as e:
             print(f"Failed to save login for account: {self.account['name']}")
