@@ -31,9 +31,9 @@ class Crawl:
             self.login()
             # Redirect to business
             self.driver.get('https://business.facebook.com/latest/insights/video_earnings')
-            sleep(3)
+            sleep(5)
             clickText('Dissmiss', self.driver)
-            sleep(2)
+            sleep(5)
             self.crawl()
         except Exception as e:
             messagebox.showerror('Thất bại','Download file thất bại')
@@ -78,6 +78,7 @@ class Crawl:
                 export_button.click()
         except Exception as e:
             raise Exception(f"Failed to click button export : {e}")
+        sleep(10)
         
         try:
             modal = self.driver.find_element(By.XPATH, "//*[@role='dialog' and @data-interactable='|keydown|']")
@@ -90,7 +91,7 @@ class Crawl:
             open_pages = modal.find_element(By.XPATH, ".//*[@aria-haspopup='listbox']")
             open_pages.click()
             print('Open modal pages successfully!')
-            sleep(3)
+            sleep(20)
         except Exception as e:
             raise Exception(f"Failed to find button open page: {e}")
         
@@ -104,7 +105,7 @@ class Crawl:
                 checkAll = modal_pages.find_element(By.XPATH, './/input[@type="checkbox" and @aria-checked="true"]')
                 break
             except Exception as e:
-                sleep(1)
+                sleep(3)
                 try:
                     btn_all_page = modal_pages.find_element(By.XPATH, './/input[@type="checkbox" and @aria-checked="false"]')
                     btn_all_page.click()
@@ -122,13 +123,13 @@ class Crawl:
         #         pass
         # sleep(10000)
         
-        sleep(1)
+        sleep(5)
 
         try:
             open_pages.click()
         except Exception as e:
             pass
-        sleep(1)
+        sleep(5)
         print('Select pages successfully!')
 
         values = ['DAILY','ASSET','ACTIVITY']
@@ -137,7 +138,7 @@ class Crawl:
             try:
                 selected_value = modal.find_element(By.XPATH, f".//input[@value='{value}']")
                 selected_value.click()
-                sleep(1)
+                sleep(2)
             except Exception as e:
                 raise Exception(f"Failed to find button open {value}: {e}")
         print('Select values successfully!')
@@ -147,7 +148,7 @@ class Crawl:
             open_metric = listbox[1]  # Lấy phần tử thứ 1 (index 1)
             open_metric.click()
             print('Open modal metric successfully!')
-            sleep(3)
+            sleep(15)
         else:
             raise Exception(f"Failed to find button open list metric: {e}")   
         
@@ -159,7 +160,7 @@ class Crawl:
         for matric in matrics:
             try:
                 matric.click()
-                sleep(0.5)
+                sleep(1)
             except Exception as e:
                 pass
         print('Select matrics successfully!')
@@ -170,7 +171,7 @@ class Crawl:
             if len(list_contents) > 2:
                 open_days = list_contents[2]
                 open_days.click()
-                sleep(3)
+                sleep(5)
                 print('Open modal days successfully!')
         except Exception as e:
             raise Exception(f"Failed to find button open days: {e}")
@@ -179,7 +180,7 @@ class Crawl:
             modal_pages = self.driver.find_element(By.XPATH, '//*[@data-testid="ContextualLayerRoot"]')
             selected_7d = modal_pages.find_element(By.XPATH, f".//input[@value='last_7_days']")
             selected_7d.click()
-            sleep(1)
+            sleep(2)
             print('Select 7 days successfully!')
         except Exception as e:
             print(f"Failed to find modal list pages: {e}")
@@ -211,7 +212,7 @@ class Crawl:
                 elapsed_time = time() - start_time
                 if elapsed_time > max_wait_time:
                     raise Exception("Timed out after waiting 30 minutes.")
-                sleep(1)
+                sleep(2)
             print("Download button clicked successfully !")
         except Exception as e:
             raise Exception(f"Failed to find modal file download: {e}")
